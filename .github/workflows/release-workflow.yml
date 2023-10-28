@@ -1,11 +1,11 @@
 name: Stable Workflow
 
 on:
-  push:
-    branches: ['release/**', '!develop']
   pull_request:
-    branches: [ 'release/**' ]
-    types: [ closed ]
+    types:
+      - closed
+    branches: 
+     - 'release/**'
 
 jobs:
   if_merged:
@@ -16,6 +16,7 @@ jobs:
           echo The PR was merged
   build:
     name: Release Workflow Ran
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - run: |
