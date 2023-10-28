@@ -1,4 +1,4 @@
-name: Nightly Workflow
+name: Develop Workflow
 
 on:
   push:
@@ -9,8 +9,8 @@ on:
 
 jobs:
     build:
-      name: Release Workflow Ran
+      name: Develop Workflow Ran
       runs-on: ubuntu-latest
       steps:
         - run: |
-            echo Release Workflow Ran
+            echo Develop Workflow Ran
