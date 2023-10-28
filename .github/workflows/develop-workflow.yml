@@ -14,4 +14,4 @@ jobs:
       if: github.event.pull_request.merged == true && !contains(github.head_ref, 'release')
       steps:
         - run: |
-            echo Develop Workflow Ran d
+            echo Develop Workflow Ran
