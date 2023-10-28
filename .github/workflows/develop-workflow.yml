@@ -1,0 +1,16 @@
+name: Nightly Workflow
+
+on:
+  push:
+    branches: '**'
+  pull_request:
+    branches: [ develop, '!release/**' ]
+    types: [ closed ]
+
+jobs:
+    build:
+      name: Release Workflow Ran
+      runs-on: ubuntu-latest
+      steps:
+        - run: |
+            echo Release Workflow Ran
