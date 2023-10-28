@@ -1,11 +1,11 @@
 name: Stable Workflow
 
 on:
+  push:
+    branches: ['release/**']
   pull_request:
-    types:
-      - closed
-    branches: 
-     - 'release/**'
+    branches: [ 'develop' ]
+    types: [ closed ]
 
 jobs:
   if_merged:
