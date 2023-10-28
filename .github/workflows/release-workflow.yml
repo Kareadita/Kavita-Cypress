@@ -1,6 +1,8 @@
 name: Stable Workflow
 
 on:
+  push:
+    branches: ['release/**', '!develop']
   pull_request:
     branches: [ 'release/**' ]
     types: [ closed ]
