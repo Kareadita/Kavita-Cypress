@@ -2,7 +2,7 @@ name: Stable Workflow
 
 on:
   pull_request:
-    branches: [ release/** ]
+    branches: [ 'release/**' ]
     types: [ closed ]
 
 jobs:
